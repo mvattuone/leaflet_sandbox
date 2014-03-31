@@ -114,28 +114,16 @@ header {
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56a8ca', endColorstr='#64a7dc',GradientType=0 ); /* IE6-9 */
     display:block;
     height:90px;
-    padding: 5px 0;
+    padding: 20px 25px;
     box-sizing: border-box;
 }
 
 .logo {
-    width:200px;
-    display:inline-block;
     color: white;
-    font-family: Helvetica Neue;
-    text-align: center;    
 }
 
 .logo h1 {
     margin:0;
-}
-
-#search {
-    width:625px;
-    margin-left:150px;
-    display:inline-block;
-    position:relative;
-    bottom:20px;
 }
 
 #search input[type="text"],
@@ -167,8 +155,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56a8ca', end
 }
 
 header nav {
-    width:697px;
-    display:inline-block;
     color:#FFF;
 }
 
