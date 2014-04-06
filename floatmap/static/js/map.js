@@ -29,7 +29,7 @@ function setEventListeners() {
 	});
 }
 
-Map = L.map('map').setView([51.505, -0.09], 13);
+Map = L.map('map').setView([44.5000, -89.5], 6);
 
 $(document).ready(function() {
 
@@ -39,6 +39,7 @@ L.tileLayer('http://{s}.tile.cloudmade.com/5015436ad80f44af82c15054968f1468/997/
     maxZoom: 18
 }).addTo(Map);
 
+L.tileLayer('/static/tiles/tiles{z}/{x}/{y}.png', {maxZoom: 9, opacity:1}).addTo(Map);
 updateMapContainer();
 setEventListeners();
 
