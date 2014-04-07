@@ -1,7 +1,7 @@
 """Tile rendering script adapted from OSM generate_tiles.py. Example to put tiles into the floatmap:
 
 python tile_generator.py --mapfile map/world.xml \
-    --tiledir ../floatmap/static/tiles \
+    --tiledir ../floatmap/static/tiles/ \
     --min_zoom 1 \
     --max_zoom 5
  """
