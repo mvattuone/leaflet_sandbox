@@ -1,7 +1,7 @@
 """Tile rendering script adapted from OSM generate_tiles.py. Example to put tiles into the floatmap:
 
 python tile_generator.py --mapfile map/world.xml \
-    --tiledir ../floatmap/static/tiles/ \
+    --tiledir ../floatmap/static/floods/ \
     --min_zoom 1 \
     --max_zoom 5
  """
@@ -158,16 +158,17 @@ def render_tiles(bbox, mapfile, tile_dir, minZoom=1,maxZoom=18, name="unknown", 
 
         # check if we have directories in place
         zoom = "%s" % z
-        if not os.path.isdir(tile_dir + zoom):
-            os.mkdir(tile_dir + zoom)
+        if not os.path.isdir(os.path.join(tile_dir, zoom)):
+            os.mkdir(os.path.join(tile_dir, zoom))
         for x in range(int(px0[0]/256.0),int(px1[0]/256.0)+1):
             # Validate x co-ordinate
             if (x < 0) or (x >= 2**z):
                 continue
             # check if we have directories in place
             str_x = "%s" % x
-            if not os.path.isdir(tile_dir + zoom + '/' + str_x):
-                os.mkdir(tile_dir + zoom + '/' + str_x)
+            dir_path = os.path.join(tile_dir, zoom, str_x)
+            if not os.path.isdir(dir_path):
+                os.mkdir(dir_path)
             for y in range(int(px0[1]/256.0),int(px1[1]/256.0)+1):
                 # Validate x co-ordinate
                 if (y < 0) or (y >= 2**z):
