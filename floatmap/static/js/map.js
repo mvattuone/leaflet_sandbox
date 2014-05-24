@@ -39,7 +39,8 @@ $(document).ready(function() {
 //     maxZoom: 18
 // }).addTo(Map);
 
-L.tileLayer('/static/tiles/{z}/{x}/{y}.png', {maxZoom: 9, opacity:1}).addTo(Map);
+// L.tileLayer('/static/tiles/{z}/{x}/{y}.png', {maxZoom: 9, opacity:1}).addTo(Map);
+L.tileLayer('/static/floods/{z}/{x}/{y}.png', {maxZoom: 9, opacity:.5}).addTo(Map);
 updateMapContainer();
 setEventListeners();
 
