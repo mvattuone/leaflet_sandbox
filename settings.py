@@ -36,7 +36,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djgeojson',
+    'leaflet',
     'floatmap',
+    'south',
+    'django.contrib.gis',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,9 +59,10 @@ ROOT_URLCONF = 'urls'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+         'ENGINE': 'django.contrib.gis.db.backends.postgis',
+         'NAME': 'geodjango',
+         'USER': 'postgres',
+     }
 }
 
 # List of callables that know how to import templates from various sources.
@@ -116,3 +121,5 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+SERIALIZATION_MODULES = {'geojson' :'djgeojson.serializers', }
