@@ -60,6 +60,7 @@ ROOT_URLCONF = 'urls'
 DATABASES = {
     'default': {
          'ENGINE': 'django.contrib.gis.db.backends.postgis',
+         'HOST': 'localhost',
          'NAME': 'geodjango',
          'USER': 'floatmap',
          'PASSWORD': 'dev',
