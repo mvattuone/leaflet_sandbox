@@ -61,7 +61,8 @@ DATABASES = {
     'default': {
          'ENGINE': 'django.contrib.gis.db.backends.postgis',
          'NAME': 'geodjango',
-         'USER': 'postgres',
+         'USER': 'floatmap',
+         'PASSWORD': 'dev',
      }
 }
 
