@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(__file__)
 
-ALLOWED_HOSTS = ('float.vattuo.net', 'vattuo.net', 'localhost',)
+ALLOWED_HOSTS = ['*'] #http://stackoverflow.com/questions/21399288/bad-request-400-nginx-gunicorn lolz
 
 
 # Quick-start development settings - unsuitable for production
