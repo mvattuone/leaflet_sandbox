@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(__file__)
 
+ALLOWED_HOSTS = ['float.vattuo.net']
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -20,9 +22,9 @@ BASE_DIR = os.path.dirname(__file__)
 SECRET_KEY = '2+b86=dwp7fau*dv+59l^3q$f-lp#)&h=m!h!e$x+azzuv2xkq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
 
