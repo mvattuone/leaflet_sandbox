@@ -123,3 +123,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 SERIALIZATION_MODULES = {'geojson' :'djgeojson.serializers', }
+
+POSTGIS_VERSION = ( 2, 1, 3 )
