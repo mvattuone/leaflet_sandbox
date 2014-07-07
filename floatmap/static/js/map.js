@@ -129,7 +129,7 @@ function updateMapContainer() {
 function showAddress(address) {
 	var g = new google.maps.Geocoder();	
 	g.geocode({ 'address': address }, function(results, status) {
-		latLng = [results[0].geometry.location.k, results[0].geometry.location.A];
+		latLng = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
 		Map.setView(latLng, 18)
 		L.marker(latLng).addTo(Map);
 		$('#share').removeClass('hidden');
