@@ -267,6 +267,11 @@ input[type="text"] {
     margin-top:10px;
 }
 
+/* override leaflet default styles for data */
+.leaflet-clickable {
+    stroke-width:0;
+}
+
 
 
 /* ==========================================================================
